@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RT Paris la Villette</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button onclick="showPage('mainPage')" class="nav-btn">Accueil</button>
+        <button onclick="showPage('collaborativePage')" class="nav-btn">RT Collaboratives</button>
+        <button onclick="showPage('mixedPage')" class="nav-btn">RT Mélangées</button>
+        <button onclick="showPage('favoritesPage')" class="favorite-button">♥ Favoris</button>
+    </header>
+
+    <div class="page" id="mainPage">
+        <div class="container" id="mainContent">
+            <div class="search-bar-container">
+                <input type="text" id="searchBar" class="search-bar" placeholder="Rechercher une réponse type..." onkeyup="filterResponses()">
+                <button onclick="showAddResponseSection()" class="add-response-btn">+</button>
+                <button onclick="showTagManagementSection()" class="manage-tags-btn">Tags</button>
+                <button onclick="showEmployeeManagementSection()" class="manage-employees-btn">Employés</button>
+            </div>
+            <div class="responses-grid" id="responsesContainer">
+                <!-- Example response, will be dynamically generated -->
+            </div>
+            <div class="confirmation" id="confirmation">Texte copié !</div>
+        </div>
+    </div>
+
+    <div class="page" id="collaborativePage">
+        <div class="container">
+            <h2>RT Collaboratives</h2>
+            <div class="responses-grid" id="collaborativeContainer">
+                <!-- Collaborative responses will be listed here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="mixedPage">
+        <div class="container">
+            <h2>RT Mélangées</h2>
+            <div class="responses-grid" id="mixedContainer">
+                <!-- Mixed responses will be listed here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="favoritesPage">
+        <div class="container">
+            <h2>Réponses Types Favorites</h2>
+            <div id="favoritesList">
+                <!-- Favorite responses will be listed here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="toggleFavoritesModule()"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
