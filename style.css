@@ -18,6 +18,9 @@ body.dark {
   --card: #1e1e1e;
   --accent: #ff5252;
 }
+body {
+  font-family: sans-serif;
+}
 header {
   background: var(--accent);
   color: white;
