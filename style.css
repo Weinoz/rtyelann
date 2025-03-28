@@ -29,7 +29,7 @@ header {
   gap: 10px;
   justify-content: center;
 }
-.nav-btn, .add-response-btn, .theme-toggle-btn {
+.nav-btn, .add-response-btn, .theme-toggle-btn, .export-btn {
   background: white;
   color: var(--accent);
   border: none;
